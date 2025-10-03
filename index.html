@@ -45,6 +45,7 @@
     .section{padding:44px 0 18px}
     .grid{display:grid; gap:22px; grid-template-columns:repeat(3, 1fr)}
     .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden}
+    .card.wide{grid-column:1 / -1}
     .card-inner{padding:20px}
     .card h3{margin:6px 0 6px}
     .card p{color:var(--muted); margin:0 0 12px}
@@ -84,6 +85,7 @@
         <a href="#cv">CV</a>
         <a href="#pubs">Publications</a>
         <a href="#scicomm">Science Communication</a>
+        <a href="#current">Current</a>
       </nav>
     </div>
   </header>
@@ -93,8 +95,8 @@
       <div class="container hero-inner">
         <div>
           <span class="badge">Hi, I'm Theda</span>
-          <h1>I study how microbes shape ecosystems — past and present.</h1>
-          <p class="lede">Full‑stack systems biologist (wet lab + bioinformatics) focused on ecosystem dynamics and fine‑scale roles of prokaryotes. I combine paleogenomics with geochemical records and confounder‑aware statistics to ask not only who was there, but what they were doing and how their functions shifted as environments reorganized.</p>
+          <h1>Microbes run the show — I study how they shape ecosystems.</h1>
+          <p class="lede">Full‑stack systems biologist (wet lab + bioinformatics) focused on disentangling ecosystem dynamics by centering the oldest, foundational partners: prokaryotes. During my PhD I treated the human as an ecosystem — especially the gut — learning how bacteria influence health and disease and how to model/analyse metagenomes (<a href="https://www.mdc-berlin.de/de/forslund" target="_blank" rel="noopener">Forslund Lab</a>). Now I’ve zoomed out: prokaryotes in whole ecosystems, their role in evolutionary change, and how to read their past via paleogenomics + geochemical records with confounder‑aware statistics.</p>
           <div class="cta">
             <a class="btn" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
             <a class="btn" href="#scicomm">Explore Science Communication</a>
@@ -106,24 +108,12 @@
     <section id="cv" class="container section" aria-label="CV">
       <h2>Curriculum Vitae</h2>
       <div class="grid">
-        <article class="card">
-          <div class="card-inner">
-            <h3>Curriculum Vitae (PDF)</h3>
-            <p>Full‑stack systems biologist with a strong interest in ecosystem dynamics and how prokaryotes influence them at the most fine‑grained level. Microbes dominate Earth in numbers, diversity, and genetic information; they recycle carbon and nitrogen, drive global biogeochemical cycles, and sustain ecosystems from the ocean to the human gut.</p>
-            <a class="special" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="pubs" class="container section" aria-label="Publications">
-      <h2>Publications</h2>
-      <div class="grid">
-        <article class="card">
+        <article class="card wide">
           <div class="card-inner">
             <h3>Publications (PDF)</h3>
-            <p>I completed my PhD in Molecular Medicine studying how microbes relate to health, then shifted toward environmental microbiomes. My current project, <strong>MELT — Microbial Evolution and Legacy of Ancient Climate Change: The Pleistocene–Holocene Transition</strong>, reads the past to inform the future. MELT won’t solve the climate crisis, and antibiotics or plastics didn’t exist back then — but hidden diversity may reveal new functions, lineages, or even compounds relevant today.</p>
+            <p>PhD in Molecular Medicine → environmental microbiomes. <strong>Microbes knit everything together</strong>; when one system is disrupted, effects ripple through others. My current project, <strong>MELT — Microbial Evolution and Legacy of Ancient Climate Change: The Pleistocene–Holocene Transition</strong>, reads the past to inform the future. MELT won’t solve the climate crisis — and antibiotics or plastics didn’t exist back then — but hidden diversity may reveal new functions, lineages, and perhaps even compounds relevant today.</p>
             <a class="special" href="TUPB_Publication.pdf" target="_blank" rel="noopener">Open publications</a>
+          </div>"_blank" rel="noopener">Open publications</a>
           </div>
         </article>
       </div>
@@ -135,7 +125,7 @@
         <article class="card">
           <div class="card-inner">
             <h3>Overview / Projects (PDF)</h3>
-            <p>Ecology and evolution belong together. Through interactive formats and storytelling I translate complex science and keep microbes in the picture — otherwise our models are half‑blind.</p>
+            <p>Ecology and evolution belong together. Through accessible visuals and interactive storytelling I keep microbes in view — otherwise our models are half‑blind.</p>
             <a class="special" href="TUPB_PublicOut.pdf" target="_blank" rel="noopener">Open projects</a>
           </div>
         </article>
@@ -174,6 +164,8 @@
         <div><a href="https://bsky.app/profile/theda.bsky.social" target="_blank" rel="noopener">Bluesky</a></div>
       </div>
     </div>
+        <div class="muted">Last updated: <span id="last-updated">—</span></div>
+    </div>
   </footer>
   <script>
     (function(){
@@ -198,6 +190,25 @@
           `).join('');
         }
       }catch(e){ /* silent */ }
+    })();
+  </script>
+  <script>
+    (function(){
+      try{
+        const cfgEl = document.getElementById('current-papers');
+        if(!cfgEl) return;
+        const cfg = JSON.parse(cfgEl.textContent);
+        // Footer timestamp
+        const le = document.getElementById('last-updated');
+        if(le && cfg.updated){ le.textContent = cfg.updated; }
+        // Cache-bust hero background using date version
+        const v = (cfg.updated||'').replace(/[^0-9]/g,'');
+        if(v){
+          const styleTag = document.createElement('style');
+          styleTag.textContent = `.hero::before{background-image:url('assets/bg.jpg?v=${v}') !important;}`;
+          document.head.appendChild(styleTag);
+        }
+      }catch(e){ /* noop */ }
     })();
   </script>
 </body>
