@@ -44,6 +44,7 @@
     .btn:hover{background:var(--panel-2); transform:translateY(-1px)}
     .section{padding:44px 0 18px}
     .grid{display:grid; gap:22px; grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
     .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden}
     .card.wide{grid-column:1 / -1}
     .card-inner{padding:20px}
@@ -65,12 +66,12 @@
     "intro": "What I'm grappling with for <strong>MELT</strong> right now: (1) <em>provenance</em> — is the signal local or transported? (2) <em>contemporaneity</em> — did the microbes really live when this layer formed, or are we seeing downward mixing/reworking? (3) <em>tempo</em> — can we trace evolutionary change or division/substitution rates that are consistent with the age of the layer?",
     "items": [
       {
-        "title": "sedaDNA depositional taphonomy — why it matters for MELT",
-        "summary": "I'm using this framework to reason about <strong>local vs. regional/distal</strong> sedaDNA signals. The contrasting taphonomic regimes across lacustrine, alluvial, terrestrial and permafrost settings help me argue whether what I see in a given stratum is truly <em>in situ</em> or has been <em>reworked</em>. That's central to defending that a bacterial community belongs to the time of deposition.",
+        "title": "sedaDNA depositional taphonomy: why it matters for MELT",
+        "summary": "I'm trying to apply this framework to reason about <strong>local vs. regional/distal</strong> sedaDNA signals. The contrasting taphonomic regimes across different settings might help me argue whether what I see in a given stratum is truly <em>in situ</em> or has been <em>reworked</em>. That's central to defending that a bacterial community belongs to the time of deposition.",
         "url": "https://www.biorxiv.org/content/10.1101/2025.04.30.651409v1.full.pdf"
       },
       {
-        "title": "Tracking evolutionary change — making \"old\" plausible",
+        "title": "Tracking evolutionary change and making \"old\" plausible",
         "summary": "To support that signals are genuinely ancient, I'm looking at work that links ancient DNA to <strong>molecular clocks and time‑dependent rates</strong>. If we detect clock‑like signal or plausible rate bounds for bacteria, that strengthens the case that the communities are not modern contaminants but reflect <em>past</em> populations.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10832523/"
       }
@@ -82,10 +83,10 @@
     <div class="container nav" role="navigation" aria-label="Main navigation">
       <div class="brand">Theda Bartolomaeus<small>Postdoctoral Researcher – Systems Biology & Microbiomes</small></div>
       <nav class="menu">
-        <a href="#cv">CV</a>
-        <a href="#pubs">Publications</a>
-        <a href="#scicomm">Science Communication</a>
+        <a href="#cvpub">CV</a>
+        <a href="TUPB_Publication.pdf" target="_blank" rel="noopener">Publications (PDF)</a>
         <a href="#current">Current</a>
+        <a href="#scicomm">Science Communication</a>
       </nav>
     </div>
   </header>
@@ -96,7 +97,7 @@
         <div>
           <span class="badge">Hi, I'm Theda</span>
           <h1>Microbes run the show — I study how they shape ecosystems.</h1>
-          <p class="lede">Full‑stack systems biologist (wet lab + bioinformatics) focused on disentangling ecosystem dynamics by centering the oldest, foundational partners: prokaryotes. During my PhD I treated the human as an ecosystem — especially the gut — learning how bacteria influence health and disease and how to model/analyse metagenomes (<a href="https://www.mdc-berlin.de/de/forslund" target="_blank" rel="noopener">Forslund Lab</a>). Now I’ve zoomed out: prokaryotes in whole ecosystems, their role in evolutionary change, and how to read their past via paleogenomics + geochemical records with confounder‑aware statistics.</p>
+          <p class="lede">I am a full‑stack systems biologist (wet lab + bioinformatics) focused on disentangling ecosystem dynamics by centering the oldest, foundational partners: prokaryotes. During my PhD I treated the human as an ecosystem especially the gut, learned how bacteria influence health and disease and how to model/analyse metagenomes (<a href="https://www.mdc-berlin.de/de/forslund" target="_blank" rel="noopener">Forslund Lab</a>). Now I’ve zoomed out: prokaryotes in whole ecosystems, their role in evolutionary change, and how to read their past via paleogenomics + geochemical records with confounder‑aware statistics.</p>
           <div class="cta">
             <a class="btn" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
             <a class="btn" href="#scicomm">Explore Science Communication</a>
@@ -105,15 +106,19 @@
       </div>
     </section>
 
-    <section id="cv" class="container section" aria-label="CV">
-      <h2>Curriculum Vitae</h2>
-      <div class="grid">
-        <article class="card wide">
+    <section id="cvpub" class="container section" aria-label="CV & Publications">
+      <h2>CV & Publications</h2>
+      <div class="grid cols-2">
+        <article class="card">
           <div class="card-inner">
-            <h3>Publications (PDF)</h3>
-            <p>PhD in Molecular Medicine → environmental microbiomes. <strong>Microbes knit everything together</strong>; when one system is disrupted, effects ripple through others. My current project, <strong>MELT — Microbial Evolution and Legacy of Ancient Climate Change: The Pleistocene–Holocene Transition</strong>, reads the past to inform the future. MELT won’t solve the climate crisis — and antibiotics or plastics didn’t exist back then — but hidden diversity may reveal new functions, lineages, and perhaps even compounds relevant today.</p>
-            <a class="special" href="TUPB_Publication.pdf" target="_blank" rel="noopener">Open publications</a>
-          </div>"_blank" rel="noopener">Open publications</a>
+            <h3>Curriculum Vitae</h3>
+            <a class="special" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-inner">
+            <h3>Publication list</h3>
+            <a class="special" href="TUPB_Publication.pdf" target="_blank" rel="noopener">Open publication list</a>
           </div>
         </article>
       </div>
@@ -125,7 +130,7 @@
         <article class="card">
           <div class="card-inner">
             <h3>Overview / Projects (PDF)</h3>
-            <p>Ecology and evolution belong together. Through accessible visuals and interactive storytelling I keep microbes in view — otherwise our models are half‑blind.</p>
+            <p>Ecology and evolution belong together. Through accessible visuals and interactive storytelling I keep microbes in view, because otherwise we are half‑blind.</p>
             <a class="special" href="TUPB_PublicOut.pdf" target="_blank" rel="noopener">Open projects</a>
           </div>
         </article>
@@ -163,8 +168,7 @@
         <div><a href="https://orcid.org/0000-0002-5156-7184" target="_blank" rel="noopener">ORCID</a></div>
         <div><a href="https://bsky.app/profile/theda.bsky.social" target="_blank" rel="noopener">Bluesky</a></div>
       </div>
-    </div>
-        <div class="muted">Last updated: <span id="last-updated">—</span></div>
+      <div class="muted">Last updated: <span id="last-updated">—</span></div>
     </div>
   </footer>
   <script>
