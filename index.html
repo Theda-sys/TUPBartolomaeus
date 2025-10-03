@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Theda Bartolomaeus – Portfolio</title>
-  <meta name="description" content="CV, Publikationen und Science Communication von Dr. Theda U. P. Bartolomaeus." />
+  <meta name="description" content="CV, publications, and science communication by Dr. Theda U. P. Bartolomaeus." />
   <meta name="theme-color" content="#0f1012">
   <style>
     :root{
@@ -59,14 +59,30 @@
       .footer-grid{grid-template-columns:1fr}
     }
   </style>
+  <script type="application/json" id="current-papers">{
+    "updated": "2025-10-03",
+    "intro": "What I'm grappling with for <strong>MELT</strong> right now: (1) <em>provenance</em> — is the signal local or transported? (2) <em>contemporaneity</em> — did the microbes really live when this layer formed, or are we seeing downward mixing/reworking? (3) <em>tempo</em> — can we trace evolutionary change or division/substitution rates that are consistent with the age of the layer?",
+    "items": [
+      {
+        "title": "sedaDNA depositional taphonomy — why it matters for MELT",
+        "summary": "I'm using this framework to reason about <strong>local vs. regional/distal</strong> sedaDNA signals. The contrasting taphonomic regimes across lacustrine, alluvial, terrestrial and permafrost settings help me argue whether what I see in a given stratum is truly <em>in situ</em> or has been <em>reworked</em>. That's central to defending that a bacterial community belongs to the time of deposition.",
+        "url": "https://www.biorxiv.org/content/10.1101/2025.04.30.651409v1.full.pdf"
+      },
+      {
+        "title": "Tracking evolutionary change — making \"old\" plausible",
+        "summary": "To support that signals are genuinely ancient, I'm looking at work that links ancient DNA to <strong>molecular clocks and time‑dependent rates</strong>. If we detect clock‑like signal or plausible rate bounds for bacteria, that strengthens the case that the communities are not modern contaminants but reflect <em>past</em> populations.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10832523/"
+      }
+    ]
+  }</script>
 </head>
 <body>
   <header>
-    <div class="container nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="container nav" role="navigation" aria-label="Main navigation">
       <div class="brand">Theda Bartolomaeus<small>Postdoctoral Researcher – Systems Biology & Microbiomes</small></div>
       <nav class="menu">
         <a href="#cv">CV</a>
-        <a href="#pubs">Publikationen</a>
+        <a href="#pubs">Publications</a>
         <a href="#scicomm">Science Communication</a>
       </nav>
     </div>
@@ -76,12 +92,12 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <span class="badge">Hallo! Ich bin Theda</span>
-          <h1>CV, Publikationen und Science Communication – übersichtlich & fokussiert.</h1>
-          <p class="lede">Dunkles, graues Layout. Schneller Zugriff auf Lebenslauf, Publikationsliste und Projekte – inklusive Biopolis‑Story & Podcast.</p>
+          <span class="badge">Hi, I'm Theda</span>
+          <h1>I study how microbes shape ecosystems — past and present.</h1>
+          <p class="lede">Full‑stack systems biologist (wet lab + bioinformatics) focused on ecosystem dynamics and fine‑scale roles of prokaryotes. I combine paleogenomics with geochemical records and confounder‑aware statistics to ask not only who was there, but what they were doing and how their functions shifted as environments reorganized.</p>
           <div class="cta">
-            <a class="btn" href="#cv">Zum CV</a>
-            <a class="btn" href="#scicomm">Zu Science Communication</a>
+            <a class="btn" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
+            <a class="btn" href="#scicomm">Explore Science Communication</a>
           </div>
         </div>
       </div>
@@ -92,22 +108,22 @@
       <div class="grid">
         <article class="card">
           <div class="card-inner">
-            <h3>Lebenslauf (PDF)</h3>
-            <p>Full‑stack Systems Biologist – Nasslabor, Bioinformatik, Multi‑Omics, Statistik & ML, Projektleitung.</p>
-            <a class="special" href="TUPB_CV.pdf" target="_blank" rel="noopener">CV öffnen</a>
+            <h3>Curriculum Vitae (PDF)</h3>
+            <p>Full‑stack systems biologist with a strong interest in ecosystem dynamics and how prokaryotes influence them at the most fine‑grained level. Microbes dominate Earth in numbers, diversity, and genetic information; they recycle carbon and nitrogen, drive global biogeochemical cycles, and sustain ecosystems from the ocean to the human gut.</p>
+            <a class="special" href="TUPB_CV.pdf" target="_blank" rel="noopener">Open CV</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="pubs" class="container section" aria-label="Publikationen">
-      <h2>Publikationen</h2>
+    <section id="pubs" class="container section" aria-label="Publications">
+      <h2>Publications</h2>
       <div class="grid">
         <article class="card">
           <div class="card-inner">
-            <h3>Publikationsliste (PDF)</h3>
-            <p>Arbeiten zu Mikrobiom‑Dynamik, kardiometabolischer Gesundheit und ökologischer Resilienz.</p>
-            <a class="special" href="TUPB_Publication.pdf" target="_blank" rel="noopener">Liste öffnen</a>
+            <h3>Publications (PDF)</h3>
+            <p>I completed my PhD in Molecular Medicine studying how microbes relate to health, then shifted toward environmental microbiomes. My current project, <strong>MELT — Microbial Evolution and Legacy of Ancient Climate Change: The Pleistocene–Holocene Transition</strong>, reads the past to inform the future. MELT won’t solve the climate crisis, and antibiotics or plastics didn’t exist back then — but hidden diversity may reveal new functions, lineages, or even compounds relevant today.</p>
+            <a class="special" href="TUPB_Publication.pdf" target="_blank" rel="noopener">Open publications</a>
           </div>
         </article>
       </div>
@@ -118,26 +134,32 @@
       <div class="grid">
         <article class="card">
           <div class="card-inner">
-            <h3>Übersicht / Projekte (PDF)</h3>
-            <p>Storytelling, Ausstellungen & Outreach. Wissenschaft greifbar machen.</p>
-            <a class="special" href="TUPB_PublicOut.pdf" target="_blank" rel="noopener">PDF öffnen</a>
+            <h3>Overview / Projects (PDF)</h3>
+            <p>Ecology and evolution belong together. Through interactive formats and storytelling I translate complex science and keep microbes in the picture — otherwise our models are half‑blind.</p>
+            <a class="special" href="TUPB_PublicOut.pdf" target="_blank" rel="noopener">Open projects</a>
           </div>
         </article>
         <article class="card">
           <div class="card-inner">
-            <h3>Biopolis – Sci‑Fiction‑Story</h3>
-            <p>Lesen: Eine erzählerische Reise durch eine mikrobielle Stadt.</p>
-            <a class="special" href="biopolis.pdf" target="_blank" rel="noopener">Story lesen</a>
+            <h3>Biopolis — a short sci‑fi story</h3>
+            <p>A narrative journey through a microbial city.</p>
+            <a class="special" href="biopolis.pdf" target="_blank" rel="noopener">Read story</a>
           </div>
         </article>
         <article class="card">
           <div class="card-inner">
             <h3>Podcast</h3>
-            <p>Gespräche über Mikroben, Klima & Gesundheit.</p>
-            <a class="special" href="https://open.spotify.com/show/4weCV7aoTVJZm7pVAA3omm?si=bcf8c184ba5f4f02" target="_blank" rel="noopener">Podcast anhören</a>
+            <p>Conversations on microbes, climate, and health.</p>
+            <a class="special" href="https://open.spotify.com/show/4weCV7aoTVJZm7pVAA3omm?si=bcf8c184ba5f4f02" target="_blank" rel="noopener">Listen on Spotify</a>
           </div>
         </article>
       </div>
+    </section>
+      <section id="current" class="container section" aria-label="Current paper obsession">
+      <h2>Current paper obsession</h2>
+      <p class="muted" id="current-intro"></p>
+      <div class="grid" id="current-grid"></div>
+      <p class="muted" id="current-updated" style="margin-top:12px"></p>
     </section>
   </main>
 
@@ -145,13 +167,38 @@
     <div class="container footer-grid">
       <div>
         <strong>Theda Bartolomaeus</strong>
-        <p class="muted">Kontakt: <a href="mailto:th.bartolomaeus@gmail.com">th.bartolomaeus@gmail.com</a></p>
+        <p class="muted">Contact: <a href="mailto:th.bartolomaeus@gmail.com">th.bartolomaeus@gmail.com</a></p>
       </div>
       <div class="muted">
-        <div><a href="https://orcid.org/000-0002-5156-7184" target="_blank" rel="noopener">ORCID</a></div>
+        <div><a href="https://orcid.org/0000-0002-5156-7184" target="_blank" rel="noopener">ORCID</a></div>
         <div><a href="https://bsky.app/profile/theda.bsky.social" target="_blank" rel="noopener">Bluesky</a></div>
       </div>
     </div>
   </footer>
+  <script>
+    (function(){
+      try{
+        const cfgEl = document.getElementById('current-papers');
+        if(!cfgEl) return;
+        const cfg = JSON.parse(cfgEl.textContent);
+        const introEl = document.getElementById('current-intro');
+        const gridEl = document.getElementById('current-grid');
+        const updEl = document.getElementById('current-updated');
+        if(cfg.intro && introEl){ introEl.innerHTML = cfg.intro; }
+        if(cfg.updated && updEl){ updEl.textContent = 'Last updated: ' + cfg.updated; }
+        if(Array.isArray(cfg.items) && gridEl){
+          gridEl.innerHTML = cfg.items.map(it => `
+            <article class="card">
+              <div class="card-inner">
+                <h3>${it.title || ''}</h3>
+                <p>${it.summary || ''}</p>
+                ${it.url ? `<a class="special" href="${it.url}" target="_blank" rel="noopener">Open</a>` : ''}
+              </div>
+            </article>
+          `).join('');
+        }
+      }catch(e){ /* silent */ }
+    })();
+  </script>
 </body>
 </html>
